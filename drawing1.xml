@@ -9,15 +9,35 @@
     <statement name="DO">
       <block type="movement_rightmotor" id="156" inline="true">
         <value name="MOVRIGHT">
-          <block type="math_number" id="169">
-            <field name="NUM">5</field>
+          <block type="math_arithmetic" id="352" inline="true">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <block type="math_number" id="169">
+                <field name="NUM">5</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="381">
+                <field name="NUM">5</field>
+              </block>
+            </value>
           </block>
         </value>
         <next>
           <block type="movement_leftmotor" id="233" inline="true">
             <value name="MOVLEFT">
-              <block type="math_number" id="265">
-                <field name="NUM">40</field>
+              <block type="math_arithmetic" id="353" inline="true">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <block type="math_number" id="265">
+                    <field name="NUM">40</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="397">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
