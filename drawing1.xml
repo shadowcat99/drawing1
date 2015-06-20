@@ -60,7 +60,7 @@
                         <field name="VAR">left</field>
                         <value name="VALUE">
                           <block type="math_arithmetic" id="442" inline="true">
-                            <field name="OP">ADD</field>
+                            <field name="OP">MINUS</field>
                             <value name="A">
                               <block type="variables_get" id="443">
                                 <field name="VAR">left</field>
@@ -95,6 +95,15 @@
                                     <field name="VAR">left</field>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="robot_delay" id="458" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="459">
+                                        <field name="NUM">100</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
@@ -105,6 +114,9 @@
                 </statement>
               </block>
             </statement>
+            <next>
+              <block type="movement_stop" id="456"></block>
+            </next>
           </block>
         </next>
       </block>
