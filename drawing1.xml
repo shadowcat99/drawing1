@@ -23,57 +23,38 @@
               </block>
             </value>
             <statement name="DO">
-              <block type="controls_repeat" id="411" inline="true">
+              <block type="controls_repeat" id="497" inline="true">
                 <value name="TIMES">
-                  <block type="math_number" id="413">
-                    <field name="NUM">100</field>
+                  <block type="math_number" id="518">
+                    <field name="NUM">20</field>
                   </block>
                 </value>
                 <statement name="DO">
-                  <block type="variables_set" id="431" inline="true">
-                    <field name="VAR">right</field>
-                    <value name="VALUE">
-                      <block type="math_arithmetic" id="353" inline="true">
-                        <field name="OP">ADD</field>
-                        <value name="A">
-                          <block type="variables_get" id="440">
-                            <field name="VAR">right</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_arithmetic" id="352" inline="true">
-                            <field name="OP">DIVIDE</field>
-                            <value name="A">
-                              <block type="math_random" id="439"></block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="381">
-                                <field name="NUM">10</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
+                  <block type="controls_repeat" id="411" inline="true">
+                    <value name="TIMES">
+                      <block type="math_number" id="413">
+                        <field name="NUM">20</field>
                       </block>
                     </value>
-                    <next>
-                      <block type="variables_set" id="441" inline="true">
-                        <field name="VAR">left</field>
+                    <statement name="DO">
+                      <block type="variables_set" id="431" inline="true">
+                        <field name="VAR">right</field>
                         <value name="VALUE">
-                          <block type="math_arithmetic" id="442" inline="true">
-                            <field name="OP">MINUS</field>
+                          <block type="math_arithmetic" id="353" inline="true">
+                            <field name="OP">ADD</field>
                             <value name="A">
-                              <block type="variables_get" id="443">
-                                <field name="VAR">left</field>
+                              <block type="variables_get" id="440">
+                                <field name="VAR">right</field>
                               </block>
                             </value>
                             <value name="B">
-                              <block type="math_arithmetic" id="444" inline="true">
+                              <block type="math_arithmetic" id="352" inline="true">
                                 <field name="OP">DIVIDE</field>
                                 <value name="A">
-                                  <block type="math_random" id="445"></block>
+                                  <block type="math_random" id="439"></block>
                                 </value>
                                 <value name="B">
-                                  <block type="math_number" id="446">
+                                  <block type="math_number" id="381">
                                     <field name="NUM">10</field>
                                   </block>
                                 </value>
@@ -82,26 +63,74 @@
                           </block>
                         </value>
                         <next>
-                          <block type="movement_rightmotor" id="156" inline="true">
-                            <value name="MOVRIGHT">
-                              <block type="variables_get" id="430">
-                                <field name="VAR">right</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="movement_leftmotor" id="233" inline="true">
-                                <value name="MOVLEFT">
-                                  <block type="variables_get" id="424">
+                          <block type="variables_set" id="441" inline="true">
+                            <field name="VAR">left</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="442" inline="true">
+                                <field name="OP">MINUS</field>
+                                <value name="A">
+                                  <block type="variables_get" id="443">
                                     <field name="VAR">left</field>
                                   </block>
                                 </value>
-                                <next>
-                                  <block type="robot_delay" id="458" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="459">
-                                        <field name="NUM">100</field>
+                                <value name="B">
+                                  <block type="math_arithmetic" id="444" inline="true">
+                                    <field name="OP">DIVIDE</field>
+                                    <value name="A">
+                                      <block type="math_random" id="445"></block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="446">
+                                        <field name="NUM">10</field>
                                       </block>
                                     </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_rightmotor" id="156" inline="true">
+                                <value name="MOVRIGHT">
+                                  <block type="variables_get" id="430">
+                                    <field name="VAR">right</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_leftmotor" id="233" inline="true">
+                                    <value name="MOVLEFT">
+                                      <block type="variables_get" id="424">
+                                        <field name="VAR">left</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="robot_delay" id="458" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="459">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="519" inline="true">
+                                            <field name="VAR">right</field>
+                                            <value name="VALUE">
+                                              <block type="math_number" id="520">
+                                                <field name="NUM">10</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="521" inline="true">
+                                                <field name="VAR">left</field>
+                                                <value name="VALUE">
+                                                  <block type="math_number" id="522">
+                                                    <field name="NUM">45</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -109,7 +138,7 @@
                           </block>
                         </next>
                       </block>
-                    </next>
+                    </statement>
                   </block>
                 </statement>
               </block>
