@@ -1,57 +1,113 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="23" inline="false" x="112" y="56">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="8">
-        <field name="OBJECT">ENTER</field>
+  <block type="variables_set" id="416" inline="true" x="208" y="70">
+    <field name="VAR">right</field>
+    <value name="VALUE">
+      <block type="math_number" id="417">
+        <field name="NUM">5</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="controls_repeat" id="411" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="413">
-            <field name="NUM">100</field>
+    <next>
+      <block type="variables_set" id="415" inline="true">
+        <field name="VAR">left</field>
+        <value name="VALUE">
+          <block type="math_number" id="418">
+            <field name="NUM">40</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="movement_rightmotor" id="156" inline="true">
-            <value name="MOVRIGHT">
-              <block type="math_arithmetic" id="352" inline="true">
-                <field name="OP">ADD</field>
-                <value name="A">
-                  <block type="math_number" id="169">
-                    <field name="NUM">5</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="381">
-                    <field name="NUM">5</field>
-                  </block>
-                </value>
+        <next>
+          <block type="controls_whileUntil" id="23" inline="false">
+            <field name="MODE">UNTIL</field>
+            <value name="NUMBER">
+              <block type="sensor_button" id="8">
+                <field name="OBJECT">ENTER</field>
               </block>
             </value>
-            <next>
-              <block type="movement_leftmotor" id="233" inline="true">
-                <value name="MOVLEFT">
-                  <block type="math_arithmetic" id="353" inline="true">
-                    <field name="OP">ADD</field>
-                    <value name="A">
-                      <block type="math_number" id="265">
-                        <field name="NUM">40</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="397">
-                        <field name="NUM">5</field>
-                      </block>
-                    </value>
+            <statement name="DO">
+              <block type="controls_repeat" id="411" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="413">
+                    <field name="NUM">100</field>
                   </block>
                 </value>
+                <statement name="DO">
+                  <block type="variables_set" id="431" inline="true">
+                    <field name="VAR">right</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="353" inline="true">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="440">
+                            <field name="VAR">right</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="352" inline="true">
+                            <field name="OP">DIVIDE</field>
+                            <value name="A">
+                              <block type="math_random" id="439"></block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="381">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="441" inline="true">
+                        <field name="VAR">left</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="442" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id="443">
+                                <field name="VAR">left</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_arithmetic" id="444" inline="true">
+                                <field name="OP">DIVIDE</field>
+                                <value name="A">
+                                  <block type="math_random" id="445"></block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="446">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_rightmotor" id="156" inline="true">
+                            <value name="MOVRIGHT">
+                              <block type="variables_get" id="430">
+                                <field name="VAR">right</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_leftmotor" id="233" inline="true">
+                                <value name="MOVLEFT">
+                                  <block type="variables_get" id="424">
+                                    <field name="VAR">left</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
